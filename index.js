@@ -2,7 +2,7 @@ const { Configuration, OpenAIAPI } = require("openai")
 
 // Note: There is no need to use Configuration, directly use OpenAIAPI
 const openai = new OpenAIAPI({
-  key: "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",
+  key: "YOUR_API_KEY",
 })
 
 const runPrompt = async () => {
