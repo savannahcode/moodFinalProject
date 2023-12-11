@@ -32,6 +32,19 @@
 
     <!-- CONTENT HERE -->
     <main class="flex-1">
+      <dialog id="otherMoodModal" class="modal">
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
       <h2 class="font-Marcellus text-3xl text-center p-5 drop-shadow-glow">
         How are you feeling today?
       </h2>
@@ -164,6 +177,7 @@
         </button>
         <button
           class="btn btn-outline text-sky-50 m-3 drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          id="otherMoodBtn"
         >
           OTHER MOOD
         </button>
@@ -180,7 +194,8 @@
       &copy; 2023 &bull; MOOD &bull; Mental Health Helper &bull;
     </footer>
     <!--SCRIPTS HERE-->
-    <!--<script src="js/index.js"></script>-->
+    --
+    <script type="module" src="index.js"></script>
     <script
       src="https://kit.fontawesome.com/77eefe8645.js"
       crossorigin="anonymous"
