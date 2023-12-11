@@ -23,174 +23,202 @@
     />
   </head>
   <body class="bg-teal-800 text-sky-50 flex flex-col min-h-screen">
-    <!-- HEADER HERE -->
-    <header>
-      <h1 class="font-Marcellus text-7xl pt-12 text-center drop-shadow-glow">
-        MOOD
-      </h1>
-    </header>
-
-    <!-- CONTENT HERE -->
-    <main class="flex-1">
-      <dialog id="otherMoodModal" class="modal">
-        <div class="modal-box">
-          <h3 class="font-bold text-lg">Hello!</h3>
-          <p class="py-4">Press ESC key or click the button below to close</p>
-          <div class="modal-action">
-            <form method="dialog">
-              <!-- if there is a button in form, it will close the modal -->
-              <button class="btn">Close</button>
-            </form>
-          </div>
+    <nav>
+      <div class="dropdown dropdown-left absolute top-2 right-2">
+        <div
+          tabindex="0"
+          role="button"
+          class="btn m-1 bg-teal-800 text-sky-50 border-sky-50 border-1 text-lg"
+        >
+          MENU
         </div>
-      </dialog>
-      <h2 class="font-Marcellus text-3xl text-center p-5 drop-shadow-glow">
-        How are you feeling today?
-      </h2>
-      <div class="flex flex-wrap mt-5 mx-auto justify-center gap-5 max-w-4xl">
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+        <ul
+          tabindex="0"
+          class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <span class="text-6xl">&#128512;</span
-          ><span class="font-Lexend">HAPPY</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128531;</span
-          ><span class="font-Lexend">STRESSED</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128530;</span
-          ><span class="font-Lexend">IRRITATED</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128532;</span
-          ><span class="font-Lexend">SAD</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128534;</span
-          ><span class="font-Lexend">OVERWHELMED</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128540;</span
-          ><span class="font-Lexend">SILLY</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128128;</span
-          ><span class="font-Lexend">SUICIDAL</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128545;</span
-          ><span class="font-Lexend">FURIOUS</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128527;</span
-          ><span class="font-Lexend">CONFIDENT</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128515;</span
-          ><span class="font-Lexend">ECSTATIC</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128543;</span
-          ><span class="font-Lexend">SCARED</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128127;</span
-          ><span class="font-Lexend">EVIL</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128542;</span
-          ><span class="font-Lexend">DEPRESSED</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128526;</span
-          ><span class="font-Lexend">RELAXED</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128547;</span
-          ><span class="font-Lexend">ANXIOUS</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128564;</span
-          ><span class="font-Lexend">SLEEPY</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128563;</span
-          ><span class="font-Lexend">EMBARASSED</span>
-        </button>
-        <!--Mood Button-->
-        <button
-          class="m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
-        >
-          <span class="text-6xl">&#128567;</span
-          ><span class="font-Lexend">SICK</span>
-        </button>
-        <button
-          class="btn btn-outline text-sky-50 m-3 drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
-          id="otherMoodBtn"
-        >
-          OTHER MOOD
-        </button>
+          <li><a href="#">Home</a></li>
+          <li><a href="https://www.samhsa.gov/find-help">Resources</a></li>
+        </ul>
       </div>
-      <div class="flex flex-col items-center">
-        <button class="btn btn-outline text-sky-50 m-3 text-4xl mt-6">
-          SUBMIT
-        </button>
-      </div>
-    </main>
+    </nav>
+    <div class="border-2 rounded-2xl border-solid border-sky-50 m-10">
+      <!-- HEADER HERE -->
+      <header>
+        <h1 class="font-Marcellus text-7xl pt-12 text-center drop-shadow-glow">
+          MOOD
+        </h1>
+      </header>
 
+      <!-- CONTENT HERE -->
+      <main class="flex-1">
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="otherMoodModal" class="modal">
+          <div
+            class="modal-box flex flex-col items-center justify-center bg-teal-900"
+          >
+            <h3 class="font-bold text-lg mb-5 text-center">I am feeling...</h3>
+            <input
+              class="input mb-5"
+              type="text"
+              placeholder="Jubilant, Distraught, High, etc."
+              id="otherMoodInput"
+            />
+            <button class="btn btn-outline text-sky-50" id="moodContinueBtn">
+              CONTINUE
+            </button>
+          </div>
+          <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+          </form>
+        </dialog>
+        <h2 class="font-Marcellus text-3xl text-center p-5 drop-shadow-glow">
+          How are you feeling today?
+        </h2>
+        <div class="flex flex-wrap mt-5 mx-auto justify-center gap-5 max-w-4xl">
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128512;</span
+            ><span class="font-Lexend">HAPPY</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128531;</span
+            ><span class="font-Lexend">STRESSED</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128530;</span
+            ><span class="font-Lexend">IRRITATED</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128532;</span
+            ><span class="font-Lexend">SAD</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128534;</span
+            ><span class="font-Lexend">OVERWHELMED</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128540;</span
+            ><span class="font-Lexend">SILLY</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128128;</span
+            ><span class="font-Lexend">SUICIDAL</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128545;</span
+            ><span class="font-Lexend">FURIOUS</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128527;</span
+            ><span class="font-Lexend">CONFIDENT</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128515;</span
+            ><span class="font-Lexend">ECSTATIC</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128543;</span
+            ><span class="font-Lexend">SCARED</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128127;</span
+            ><span class="font-Lexend">EVIL</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128542;</span
+            ><span class="font-Lexend">DEPRESSED</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128526;</span
+            ><span class="font-Lexend">RELAXED</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128547;</span
+            ><span class="font-Lexend">ANXIOUS</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128564;</span
+            ><span class="font-Lexend">SLEEPY</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128563;</span
+            ><span class="font-Lexend">EMBARASSED</span>
+          </button>
+          <!--Mood Button-->
+          <button
+            class="moodBtn m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
+          >
+            <span class="text-6xl">&#128567;</span
+            ><span class="font-Lexend">SICK</span>
+          </button>
+          <button
+            class="btn btn-outline text-sky-50 m-3 drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+            id="otherMoodBtn"
+          >
+            OTHER MOOD
+          </button>
+        </div>
+        <div class="flex flex-col items-center">
+          <button class="btn btn-outline text-sky-50 mx-3 text-4xl my-12">
+            SUBMIT
+          </button>
+        </div>
+      </main>
+    </div>
     <!-- FOOTER HERE -->
     <footer class="font-Lexend font-extralight text-center p-4">
-      &copy; 2023 &bull; MOOD &bull; Mental Health Helper &bull;
+      <div></div>
+      <div>&copy; 2023 &bull; MOOD &bull; Mental Health Helper &bull;</div>
     </footer>
     <!--SCRIPTS HERE-->
     <script src="index.js"></script>
