@@ -40,7 +40,8 @@ submitBtn1.addEventListener("click", function (event) {
   if (userMood === ``) {
     selectMoodModal.showModal()
     return
+  } else {
+    moodBtnGroup.innerHTML = `<textarea rows="10" cols="50" class="textarea text-area-bordered break-words min-w-2/3 h-96 rounded-2xl p-5 text-sky-50 bg-slate-900" placeholder="It was an off day, It was a good day, I went to a place... etc."></textarea>`
+    questionAsker.innerHTML = `Why are you feeling ${userMood} today?`
   }
-  moodBtnGroup.innerHTML = `<input class="input"></input>`
-  questionAsker.innerHTML = `Why are you feeling ${userMood} today?`
 })
