@@ -11,6 +11,7 @@ const openai = new OpenAI(process.env.OPENAI_API_KEY)
 
 app.use(express.json())
 app.use(cors())
+app.options("*", cors())
 
 app.post("/generate", async (req, res) => {
   const { userMood, userMoodReason } = req.body
