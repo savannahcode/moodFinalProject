@@ -11,8 +11,9 @@ const openai = new OpenAI(process.env.OPENAI_API_KEY)
 
 app.use(express.json())
 app.options("*", cors())
+app.use(cors())
 
-app.post("/generate", async (req, res) => {
+app.post("/api/generate", async (req, res) => {
   const { userMood, userMoodReason } = req.body
   const completion = await openai.chat.completions.create({
     messages: [
