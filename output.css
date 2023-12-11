@@ -1933,6 +1933,10 @@ html {
   margin: 0.75rem !important;
 }
 
+.m-auto {
+  margin: auto !important;
+}
+
 .mx-3 {
   margin-left: 0.75rem !important;
   margin-right: 0.75rem !important;
@@ -1964,16 +1968,16 @@ html {
   display: flex !important;
 }
 
-.h-\[700px\] {
-  height: 700px !important;
-}
-
 .min-h-screen {
   min-height: 100vh !important;
 }
 
 .w-52 {
   width: 13rem !important;
+}
+
+.w-5\/6 {
+  width: 83.333333% !important;
 }
 
 .max-w-4xl {
@@ -2048,6 +2052,11 @@ html {
   background-color: rgb(19 78 74 / var(--tw-bg-opacity)) !important;
 }
 
+.bg-slate-900 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity)) !important;
+}
+
 .p-2 {
   padding: 0.5rem !important;
 }
@@ -2103,6 +2112,11 @@ html {
 
 .text-lg {
   font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-xl {
+  font-size: 1.25rem !important;
   line-height: 1.75rem !important;
 }
 
@@ -2171,10 +2185,4 @@ html {
 .focus\:drop-shadow-chosen:focus {
   --tw-drop-shadow: drop-shadow(0 0px 20px rgba(0, 0, 0, 0.8)) drop-shadow(0 0px 65px rgba(0, 0, 0, 0.8)) !important;
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
-}
-
-@media (min-width: 768px) {
-  .md\:min-h-full {
-    min-height: 100% !important;
-  }
 }

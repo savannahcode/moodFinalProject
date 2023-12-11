@@ -15,6 +15,9 @@ let selectMoodModal = document.getElementById("selectMoodModal")
 let closeErrorBtn = document.getElementById("closeErrorBtn")
 let submitBtn2 = document.querySelector(".submitBtn2")
 let submitBtnHolder = document.getElementById("submitBtnHolder")
+let hiddenAdvice = document.getElementById("hiddenAdvice")
+
+hiddenAdvice.style.display = "none"
 
 otherMoodBtn.addEventListener("click", function (event) {
   event.stopPropagation()
@@ -58,6 +61,7 @@ submitBtnHolder.addEventListener("click", function (event) {
     submitBtnHolder.innerHTML = ``
     moodBtnGroup.innerHTML = ``
     questionAsker.innerHTML = `Your Caring AI Recommendation:`
-    moodBtnGroup.innerHTML = `<div class="text-xl w-5/6 text-sky-50 bg-slate-900 rounded-2xl p-5"><p>${userMoodAdvice}</p></div>`
+    hiddenAdvice.style.display = "block"
+    hiddenAdvice.firstChild.innerText = `${userMoodAdvice}`
   }
 })
