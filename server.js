@@ -3,8 +3,8 @@ import OpenAI from "openai"
 
 const openai = new OpenAI(process.env.OPENAI_API_KEY)
 
-let userMood = `confused`
-let userMoodReason = `I'm just a bad person. I feel like no one loves me and I'm so lonely. I got broken up with amd I'm so sad. I'm so depressed. I'm so anxious. I'm so stressed. I'm so angry. I'm so mad. I'm so happy. I'm so excited. I'm so tired. I'm so exhausted.`
+let userMood = `overwhelmed`
+let userMoodReason = `I'm so stressed about finals. I have so much to do and I don't know where to start. I'm so overwhelmed. I hope I can pass my classes and simeltaneously learn what I need to learn to be useful and marketable in the industry.`
 
 async function main() {
   const completion = await openai.chat.completions.create({

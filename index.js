@@ -1,3 +1,5 @@
+//import { moods } from "./moods.mjs"
+
 let userMood = ``
 let userMoodReason = ``
 let userMoodAdvice = `You need some time to yourself. Take a break from your phone and computer. Go outside and get some fresh air. Take a walk. Talk to a friend or family member. You can also try meditating.`
@@ -64,7 +66,7 @@ let moods = [
     htmlCode: "&#128547;",
   },
   {
-    mood: "SLEEPY",
+    mood: "FATIGUED",
     htmlCode: "&#128564;",
   },
   {
