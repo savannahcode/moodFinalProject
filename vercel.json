@@ -18,5 +18,5 @@
       ]
     }
   ],
-  "routes": [{ "src": "/api/generate", "dest": "/api/generate.js" }]
+  "rewrites": [{ "source": "/api/generate", "destination": "/api/generate.js" }]
 }
