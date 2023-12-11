@@ -1964,8 +1964,20 @@ html {
   display: flex !important;
 }
 
+.h-\[700px\] {
+  height: 700px !important;
+}
+
 .min-h-screen {
   min-height: 100vh !important;
+}
+
+.min-h-full {
+  min-height: 100% !important;
+}
+
+.min-h-\[720px\] {
+  min-height: 720px !important;
 }
 
 .w-52 {
@@ -2163,4 +2175,10 @@ html {
 .focus\:drop-shadow-chosen:focus {
   --tw-drop-shadow: drop-shadow(0 0px 20px rgba(0, 0, 0, 0.8)) drop-shadow(0 0px 65px rgba(0, 0, 0, 0.8)) !important;
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
+@media (min-width: 768px) {
+  .md\:min-h-full {
+    min-height: 100% !important;
+  }
 }
