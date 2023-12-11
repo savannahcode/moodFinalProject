@@ -12,7 +12,7 @@ const openai = new OpenAI(process.env.OPENAI_API_KEY)
 app.use(express.json())
 app.use(
   cors({
-    origin: "https://mood-mental-health.vercel.app/generate", // Add your actual frontend origin here
+    origin: "https://mood-mental-health.vercel.app/", // Add your actual frontend origin here
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
