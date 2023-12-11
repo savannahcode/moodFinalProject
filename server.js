@@ -1,20 +1,12 @@
-// server.js
-import express from "express"
-import { OpenAI } from "openai"
-import dotenv from "dotenv"
-import cors from "cors"
+import "dotenv/config.js"
+import OpenAI from "openai"
 
-dotenv.config()
-
-const app = express()
 const openai = new OpenAI(process.env.OPENAI_API_KEY)
 
-app.use(express.json())
-app.options("*", cors())
-app.use(cors())
+let userMood = `angry`
+let userMoodReason = `I failed a test and finals are very stressful. I feel like there's not enough time in the day to get everything done.`
 
-app.post("/api/generate", async (req, res) => {
-  const { userMood, userMoodReason } = req.body
+async function main() {
   const completion = await openai.chat.completions.create({
     messages: [
       {
@@ -25,7 +17,7 @@ app.post("/api/generate", async (req, res) => {
     model: "gpt-3.5-turbo",
   })
 
-  res.json(completion.choices[0].message.content)
-})
+  console.log(completion.choices[0].message.content)
+}
 
-app.listen(3000, () => console.log("Server listening on port 3000"))
+main()
