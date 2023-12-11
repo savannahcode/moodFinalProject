@@ -1,5 +1,5 @@
-let userMood = `angry`
-let userMoodReason = `I failed a test and finals are very stressful. I feel like there's not enough time in the day to get everything done.`
+let userMood = ``
+let userMoodReason = ``
 
 // documment selectors
 let otherMoodBtn = document.getElementById("otherMoodBtn")
@@ -7,6 +7,11 @@ let otherMoodModal = document.getElementById("otherMoodModal")
 let moodContinueBtn = document.getElementById("moodContinueBtn")
 let otherMoodInput = document.getElementById("otherMoodInput")
 let moodBtns = document.querySelectorAll(".moodBtn")
+let moodBtnGroup = document.getElementById("moodBtnGroup")
+let submitBtn1 = document.getElementById("submitBtn1")
+let questionAsker = document.getElementById("questionAsker")
+let selectMoodModal = document.getElementById("selectMoodModal")
+let closeErrorBtn = document.getElementById("closeErrorBtn")
 
 otherMoodBtn.addEventListener("click", function (event) {
   event.stopPropagation()
@@ -22,18 +27,20 @@ moodContinueBtn.addEventListener("click", function () {
 moodBtns.forEach(function (btn) {
   btn.addEventListener("click", function () {
     userMood = this.children[1].innerText.toLowerCase()
-    // Remove the 'active' class from all buttons
-    moodBtns.forEach(function (otherBtn) {
-      otherBtn.classList.remove("drop-shadow-chosen")
-      otherBtn.classList.remove("scale-110")
-    })
-
-    // Add the 'active' class to the clicked button
-    this.classList.add("drop-shadow-chosen")
-    this.classList.add("scale-110")
-    console.log(this)
-
-    userMood = this.children[1].innerText.toLowerCase()
     console.log(userMood)
   })
+})
+
+closeErrorBtn.addEventListener("click", function () {
+  selectMoodModal.close()
+})
+
+submitBtn1.addEventListener("click", function (event) {
+  event.stopPropagation()
+  if (userMood === ``) {
+    selectMoodModal.showModal()
+    return
+  }
+  moodBtnGroup.innerHTML = `<input class="input"></input>`
+  questionAsker.innerHTML = `Why are you feeling ${userMood} today?`
 })
