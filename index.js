@@ -21,7 +21,7 @@ otherMoodBtn.addEventListener("click", function () {
 
 // index.js
 async function generateText(userMood, userMoodReason) {
-  const response = await fetch(`${API_URL}/generate`, {
+  const response = await fetch(`${API_URL}/api/generate`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

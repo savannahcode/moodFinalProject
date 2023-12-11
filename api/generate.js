@@ -1,5 +1,3 @@
-const cors = require("cors")
-const express = require("express")
 const OpenAI = require("openai")
 const dotenv = require("dotenv")
 
@@ -7,12 +5,7 @@ dotenv.config()
 
 const openai = new OpenAI(process.env.OPENAI_API_KEY)
 
-const app = express()
-
-app.use(cors())
-app.options("*", cors())
-
-app.post("/api/generate", async (req, res) => {
+module.exports = async (req, res) => {
   const { userMood, userMoodReason } = req.body
   const completion = await openai.chat.completions.create({
     messages: [
@@ -25,6 +18,4 @@ app.post("/api/generate", async (req, res) => {
   })
 
   res.json(completion.choices[0].message.content)
-})
-
-module.exports = app
+}

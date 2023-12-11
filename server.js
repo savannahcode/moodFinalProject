@@ -10,14 +10,6 @@ const app = express()
 const openai = new OpenAI(process.env.OPENAI_API_KEY)
 
 app.use(express.json())
-app.use(
-  cors({
-    origin: "https://mood-mental-health-bd1224syt-savannahcode.vercel.app", // Add your actual frontend origin here
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  })
-)
-
 app.options("*", cors())
 
 app.post("/generate", async (req, res) => {
