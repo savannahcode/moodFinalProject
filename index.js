@@ -2,6 +2,81 @@ let userMood = ``
 let userMoodReason = ``
 let userMoodAdvice = `You need some time to yourself. Take a break from your phone and computer. Go outside and get some fresh air. Take a walk. Talk to a friend or family member. You can also try meditating.`
 
+let moods = [
+  {
+    mood: "HAPPY",
+    htmlCode: "&#128512;",
+  },
+  {
+    mood: "STRESSED",
+    htmlCode: "&#128531;",
+  },
+  {
+    mood: "IRRITATED",
+    htmlCode: "&#128530;",
+  },
+  {
+    mood: "SAD",
+    htmlCode: "&#128532;",
+  },
+  {
+    mood: "OVERWHELMED",
+    htmlCode: "&#128534;",
+  },
+  {
+    mood: "SILLY",
+    htmlCode: "&#128540;",
+  },
+  {
+    mood: "SUICIDAL",
+    htmlCode: "&#128128;",
+  },
+  {
+    mood: "FURIOUS",
+    htmlCode: "&#128545;",
+  },
+  {
+    mood: "CONFIDENT",
+    htmlCode: "&#128527;",
+  },
+  {
+    mood: "ECSTATIC",
+    htmlCode: "&#128515;",
+  },
+  {
+    mood: "SCARED",
+    htmlCode: "&#128543;",
+  },
+  {
+    mood: "EVIL",
+    htmlCode: "&#128527;",
+  },
+  {
+    mood: "DEPRESSED",
+    htmlCode: "&#128542;",
+  },
+  {
+    mood: "RELAXED",
+    htmlCode: "&#128526;",
+  },
+  {
+    mood: "ANXIOUS",
+    htmlCode: "&#128547;",
+  },
+  {
+    mood: "SLEEPY",
+    htmlCode: "&#128564;",
+  },
+  {
+    mood: "EMBARASSED",
+    htmlCode: "&#128563;",
+  },
+  {
+    mood: "SICK",
+    htmlCode: "&#128567;",
+  },
+]
+
 // documment selectors
 let otherMoodBtn = document.getElementById("otherMoodBtn")
 let otherMoodModal = document.getElementById("otherMoodModal")
