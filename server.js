@@ -1,12 +1,33 @@
+import express from "express"
 import "dotenv/config.js"
+import cors from "cors"
+const cors = require("cors")
 import OpenAI from "openai"
 
 const openai = new OpenAI(process.env.OPENAI_API_KEY)
 
-let userMood = `confused`
-let userMoodReason = `I'm just a bad person. I feel like no one loves me and I'm so lonely. I got broken up with amd I'm so sad. I'm so depressed. I'm so anxious. I'm so stressed. I'm so angry. I'm so mad. I'm so happy. I'm so excited. I'm so tired. I'm so exhausted.`
+const corsOptions = {
+  origin: "https://localhost:3000", // Allow all origins
+  methods: ["GET", "POST"], // Allow GET and POST requests
+  allowedHeaders: ["Content-Type", "Authorization"], // Allow Content-Type and Authorization headers
+}
 
-async function main() {
+app.use(cors(corsOptions))
+const app = express()
+app.use(express.json())
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  )
+  next()
+})
+
+app.post("/api/completions", async (req, res) => {
+  const userMood = req.body.userMood
+  const userMoodReason = req.body.userMoodReason
+
   const completion = await openai.chat.completions.create({
     messages: [
       {
@@ -17,7 +38,11 @@ async function main() {
     model: "gpt-3.5-turbo",
   })
 
-  console.log(completion.choices[0].message.content)
-}
+  res.json(completion.choices[0].message.content)
+})
 
-main()
+app.listen(3000, () => console.log("Server listening on port 3000"))
+
+app.get("/", (req, res) => {
+  res.send("Hello, world!")
+})

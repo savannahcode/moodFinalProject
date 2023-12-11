@@ -56,6 +56,24 @@ submitBtn1.addEventListener("click", function (event) {
 
 submitBtnHolder.addEventListener("click", function (event) {
   if (event.target.classList.contains("submitBtn2")) {
+    fetch("http://localhost:3000/api/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userMood: userMood,
+        userMoodReason: userMoodReason,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data)
+      })
+      .catch((error) => {
+        console.error("Error:", error)
+      })
+
     userMoodReason = document.querySelector(".textarea").value
     console.log(userMoodReason)
     submitBtnHolder.innerHTML = ``
