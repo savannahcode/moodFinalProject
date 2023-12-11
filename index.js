@@ -1,7 +1,4 @@
-const API_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://mood-mental-health-bd1224syt-savannahcode.vercel.app"
-    : "http://localhost:3000"
+import API_URL from "./config.js"
 
 let userMood = `angry`
 let userMoodReason = `I failed a test and finals are very stressful. I feel like there's not enough time in the day to get everything done.`
@@ -24,7 +21,7 @@ otherMoodBtn.addEventListener("click", function () {
 
 // index.js
 async function generateText(userMood, userMoodReason) {
-  const response = await fetch("http://localhost:3000/generate", {
+  const response = await fetch(`${API_URL}/generate`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
