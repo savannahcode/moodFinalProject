@@ -56,7 +56,8 @@ submitBtnHolder.addEventListener("click", function (event) {
     userMoodReason = document.querySelector(".textarea").value
     console.log(userMoodReason)
     submitBtnHolder.innerHTML = ``
+    moodBtnGroup.innerHTML = ``
     questionAsker.innerHTML = `Your Caring AI Recommendation:`
-    moodBtnGroup.innerHTML = `<div type="text" class="w-5/6 text-sky-50 bg-slate-900 rounded-2xl p-5">${userMoodAdvice}</div>`
+    moodBtnGroup.innerHTML = `<div class="text-xl w-5/6 text-sky-50 bg-slate-900 rounded-2xl p-5"><p>${userMoodAdvice}</p></div>`
   }
 })

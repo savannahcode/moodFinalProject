@@ -1972,14 +1972,6 @@ html {
   min-height: 100vh !important;
 }
 
-.min-h-full {
-  min-height: 100% !important;
-}
-
-.min-h-\[720px\] {
-  min-height: 720px !important;
-}
-
 .w-52 {
   width: 13rem !important;
 }
@@ -1990,6 +1982,10 @@ html {
 
 .flex-1 {
   flex: 1 1 0% !important;
+}
+
+.flex-grow {
+  flex-grow: 1 !important;
 }
 
 .transform {
@@ -2080,6 +2076,11 @@ html {
   font-family: Marcellus, sans-serif !important;
 }
 
+.text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
 .text-3xl {
   font-size: 1.875rem !important;
   line-height: 2.25rem !important;
@@ -2103,11 +2104,6 @@ html {
 .text-lg {
   font-size: 1.125rem !important;
   line-height: 1.75rem !important;
-}
-
-.text-2xl {
-  font-size: 1.5rem !important;
-  line-height: 2rem !important;
 }
 
 .font-bold {
