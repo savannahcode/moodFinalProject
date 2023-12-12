@@ -79,6 +79,8 @@ let moods = [
   },
 ]
 
+let moodLogs = []
+
 // documment selectors
 let otherMoodModal = document.getElementById("otherMoodModal")
 let moodContinueBtn = document.getElementById("moodContinueBtn")
