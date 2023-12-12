@@ -7,6 +7,7 @@ app.use(express.json())
 let moods = [
   {
     mood: "HAPPY",
+    // using UTF-8 alphabet
     htmlCode: "&#128512;",
   },
   {
@@ -128,4 +129,4 @@ app.delete("/moods/:mood", (req, res) => {
   res.json({ mood: moodName })
 })
 
-app.listen(3006, () => console.log("Server running on port 3006"))
+app.listen(3078, () => console.log("Server running on port 3078"))

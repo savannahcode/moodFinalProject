@@ -812,6 +812,15 @@ html {
   content: var(--tw-content);
 }
 
+.chat {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -1313,6 +1322,23 @@ html {
 .swap-active .swap-on,
 .swap input:indeterminate ~ .swap-indeterminate {
   opacity: 1;
+}
+
+.textarea {
+  min-height: 3rem;
+  flex-shrink: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 2;
+  border-radius: var(--rounded-btn, 0.5rem);
+  border-width: 1px;
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
 .btn:active:hover,
@@ -1850,6 +1876,38 @@ html {
   }
 }
 
+.textarea:focus {
+  box-shadow: none;
+  border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+}
+
+.textarea-disabled,
+  .textarea:disabled,
+  .textarea[disabled] {
+  cursor: not-allowed;
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+  --tw-text-opacity: 0.2;
+}
+
+.textarea-disabled::-moz-placeholder, .textarea:disabled::-moz-placeholder, .textarea[disabled]::-moz-placeholder {
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-placeholder-opacity)));
+  --tw-placeholder-opacity: 0.2;
+}
+
+.textarea-disabled::placeholder,
+  .textarea:disabled::placeholder,
+  .textarea[disabled]::placeholder {
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-placeholder-opacity)));
+  --tw-placeholder-opacity: 0.2;
+}
+
 @keyframes toast-pop {
   0% {
     transform: scale(0.9);
@@ -1864,6 +1922,23 @@ html {
 
 .artboard.phone {
   width: 320px;
+}
+
+.avatar.online:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  display: block;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-su,oklch(var(--su)/var(--tw-bg-opacity)));
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: var(--fallback-b1,oklch(var(--b1)/1));
+  width: 15%;
+  height: 15%;
+  top: 7%;
+  right: 7%;
 }
 
 .modal-top :where(.modal-box) {
@@ -1903,6 +1978,10 @@ html {
   border-top-right-radius: var(--rounded-box, 1rem);
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+.static {
+  position: static !important;
 }
 
 .absolute {
@@ -1964,20 +2043,28 @@ html {
   margin-top: 1.25rem !important;
 }
 
+.block {
+  display: block !important;
+}
+
 .flex {
   display: flex !important;
+}
+
+.h-96 {
+  height: 24rem !important;
 }
 
 .min-h-screen {
   min-height: 100vh !important;
 }
 
-.w-52 {
-  width: 13rem !important;
-}
-
 .w-5\/6 {
   width: 83.333333% !important;
+}
+
+.w-52 {
+  width: 13rem !important;
 }
 
 .max-w-4xl {
@@ -2016,6 +2103,10 @@ html {
   gap: 1.25rem !important;
 }
 
+.break-words {
+  overflow-wrap: break-word !important;
+}
+
 .rounded-2xl {
   border-radius: 1rem !important;
 }
@@ -2042,6 +2133,11 @@ html {
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity))) !important;
 }
 
+.bg-slate-900 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity)) !important;
+}
+
 .bg-teal-800 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(17 94 89 / var(--tw-bg-opacity)) !important;
@@ -2050,11 +2146,6 @@ html {
 .bg-teal-900 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(19 78 74 / var(--tw-bg-opacity)) !important;
-}
-
-.bg-slate-900 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity)) !important;
 }
 
 .p-2 {
@@ -2141,6 +2232,10 @@ html {
 
 .drop-shadow-glow {
   --tw-drop-shadow: drop-shadow(0 0px 20px rgba(255,255, 255, 0.7)) drop-shadow(0 0px 65px rgba(255, 255,255, 0.5)) !important;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
+.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
 }
 

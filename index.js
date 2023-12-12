@@ -94,7 +94,6 @@ let hiddenAdvice = document.getElementById("hiddenAdvice")
 
 hiddenAdvice.style.display = "none"
 
-moodBtnGroup.innerHTML = ``
 moods.forEach(function (emotion) {
   moodBtnGroup.innerHTML += `<button
   class="moodBtn focus:drop-shadow-chosen focus:scale-110 m-3 flex flex-col drop-shadow-glow hover:drop-shadow-select transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 items-center"
