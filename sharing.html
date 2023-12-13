@@ -36,10 +36,10 @@
           tabindex="0"
           class="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 bg-teal-700"
         >
-          <li class="text-gray-400"><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="https://www.samhsa.gov/find-help">Resources</a></li>
           <li><a href="pastEntries.html">Past Entries</a></li>
-          <li><a href="#">Sharing</a></li>
+          <li class="text-gray-400"><a href="#">Sharing</a></li>
           <li class="text-gray-400"><a href="#">Login</a></li>
         </ul>
       </div>
@@ -54,50 +54,10 @@
 
       <!-- CONTENT HERE -->
       <main class="flex-1">
-        <!-- otherMoodModal -->
-        <dialog id="otherMoodModal" class="modal">
-          <div
-            class="modal-box flex flex-col items-center justify-center bg-teal-900"
-          >
-            <h3 class="font-bold text-lg mb-5 text-center">I am feeling...</h3>
-            <input
-              class="input mb-5"
-              type="text"
-              placeholder="Jubilant, Distraught, High, etc."
-              id="otherMoodInput"
-            />
-            <button class="btn btn-outline text-sky-50" id="moodContinueBtn">
-              CONTINUE
-            </button>
-          </div>
-          <form method="dialog" class="modal-backdrop">
-            <button>close</button>
-          </form>
-        </dialog>
-        <!-- selectMoodModal -->
-        <dialog id="selectMoodModal" class="modal">
-          <div
-            class="modal-box flex flex-col items-center justify-center bg-teal-900"
-          >
-            <h3 class="font-bold text-2xl mb-5 text-center">Please select a mood.</h3>
-            <button class="btn btn-outline text-sky-50" id="closeErrorBtn">CLOSE</button>
-          </div>
-          <form method="dialog" class="modal-backdrop">
-            <button>close</button>
-          </form>
-        </dialog>
-        <h2 id="questionAsker" class="font-Marcellus text-3xl text-center p-5 drop-shadow-glow">
-          How are you feeling today?
-        </h2>
-        <div id="hiddenAdvice" class="text-xl w-5/6 text-sky-50 bg-slate-900 rounded-2xl p-5 m-auto"><p>${userMoodAdvice}</p></div>
-        <div id= "moodBtnGroup" class="flex flex-wrap mt-5 mx-auto justify-center gap-5 max-w-4xl">
-          
-        </div>
-        <div id="submitBtnHolder" class="flex flex-col items-center">
-          <button class="submitBtn1 btn btn-outline text-sky-50 mx-3 text-4xl my-12">
-            SUBMIT
-          </button>
-        </div>
+        <h2 class="font-Marcellus text-3xl text-center p-5 drop-shadow-glow">
+            SHARING
+          </h2>
+       
       </main>
     </div>
     <!-- FOOTER HERE -->
