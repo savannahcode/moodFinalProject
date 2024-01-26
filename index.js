@@ -168,11 +168,23 @@ document.addEventListener("DOMContentLoaded", function () {
         advice: userMoodAdvice,
       })
       console.log(moodLogs)
+      // Convert moodLogs array to JSON and store it in localStorage
+      localStorage.setItem("moodLogs", JSON.stringify(moodLogs))
+
+      console.log(moodLogs)
     }
   })
 })
 
 if (window.location.pathname === "/pastEntries.html") {
+  // Check if moodLogs data exists in localStorage
+  if (localStorage.getItem("moodLogs")) {
+    // Retrieve moodLogs data from localStorage and convert it back to an array
+    let moodLogs = JSON.parse(localStorage.getItem("moodLogs"))
+
+    // Now you can use moodLogs array
+    console.log(moodLogs)
+  }
   console.log("I'm in pastEntires.html")
   console.log(moodLogs)
   moodLogs.forEach(function (log) {
