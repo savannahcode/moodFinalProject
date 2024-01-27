@@ -2,12 +2,6 @@ let userMood = ``
 let userMoodReason = ``
 let userMoodAdvice = `You need some time to yourself. Take a break from your phone and computer. Go outside and get some fresh air. Take a walk. Talk to a friend or family member. You can also try meditating.`
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  let loadingBar = document.getElementById("loadingBar")
-  loadingBar.style.display = "none"
-  // rest of your code...
-})
-
 // documment selectors
 let otherMoodBtn = document.getElementById("otherMoodBtn")
 let otherMoodModal = document.getElementById("otherMoodModal")
