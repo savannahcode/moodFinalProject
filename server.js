@@ -66,3 +66,5 @@ app.listen(3020, () => {
 app.get("/", (req, res) => {
   res.send("Hello World!")
 })
+
+// to do: try changing this code into a serverless function so it works in vercel. Currently it would work in AWS
