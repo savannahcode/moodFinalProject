@@ -64,7 +64,7 @@ submitBtnHolder.addEventListener("click", function (event) {
     moodBtnGroup.innerHTML = ``
     loadingBar.style.display = "block"
     questionAsker.innerHTML = `Your Caring AI Recommendation:`
-    fetch("http://localhost:3010/api/completions", {
+    fetch("http://localhost:3020/api/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
