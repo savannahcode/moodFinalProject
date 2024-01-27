@@ -56,7 +56,12 @@ submitBtn1.addEventListener("click", function (event) {
 
 submitBtnHolder.addEventListener("click", function (event) {
   if (event.target.classList.contains("submitBtn2")) {
-    fetch("http://localhost:3000/api/completions", {
+    userMoodReason = document.querySelector(".textarea").value
+    console.log(userMoodReason)
+    submitBtnHolder.innerHTML = ``
+    moodBtnGroup.innerHTML = ``
+    questionAsker.innerHTML = `Your Caring AI Recommendation:`
+    fetch("http://localhost:3010/api/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,17 +74,12 @@ submitBtnHolder.addEventListener("click", function (event) {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data)
+        userMoodAdvice = data
+        hiddenAdvice.firstChild.innerText = `${userMoodAdvice}`
+        hiddenAdvice.style.display = "block"
       })
       .catch((error) => {
         console.error("Error:", error)
       })
-
-    userMoodReason = document.querySelector(".textarea").value
-    console.log(userMoodReason)
-    submitBtnHolder.innerHTML = ``
-    moodBtnGroup.innerHTML = ``
-    questionAsker.innerHTML = `Your Caring AI Recommendation:`
-    hiddenAdvice.style.display = "block"
-    hiddenAdvice.firstChild.innerText = `${userMoodAdvice}`
   }
 })
