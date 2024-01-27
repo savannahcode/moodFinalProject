@@ -16,8 +16,10 @@ let closeErrorBtn = document.getElementById("closeErrorBtn")
 let submitBtn2 = document.querySelector(".submitBtn2")
 let submitBtnHolder = document.getElementById("submitBtnHolder")
 let hiddenAdvice = document.getElementById("hiddenAdvice")
+let loadingBar = document.getElementById("loadingBar")
 
 hiddenAdvice.style.display = "none"
+loadingBar.style.display = "none"
 
 otherMoodBtn.addEventListener("click", function (event) {
   event.stopPropagation()
@@ -60,6 +62,7 @@ submitBtnHolder.addEventListener("click", function (event) {
     console.log(userMoodReason)
     submitBtnHolder.innerHTML = ``
     moodBtnGroup.innerHTML = ``
+    loadingBar.style.display = "block"
     questionAsker.innerHTML = `Your Caring AI Recommendation:`
     fetch("http://localhost:3010/api/completions", {
       method: "POST",
